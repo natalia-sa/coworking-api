@@ -53,10 +53,9 @@ class WorkstationsController < ApplicationController
     # DELETE /workstations/1
     # DELETE /workstations/1.json
     def destroy
-      
       workstation = Workstation.find(params[:id])
-				workstation.destroy
-				render json: {status: 'SUCCESS', message:'Deleted ', data:workstation},status: :ok
+			workstation.destroy
+			render json: {status: 'SUCCESS', message:'Deleted ', data:workstation},status: :ok
     end
   
     private
